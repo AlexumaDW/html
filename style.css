@@ -1,0 +1,16 @@
+h1 {
+  color: navy;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.etiqueta-bloque {
+  background-color: red;
+}
+
+.etiqueta-linea {
+  background-color: blueviolet;
+}
