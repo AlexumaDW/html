@@ -1,5 +1,13 @@
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   color: navy;
+}
+
+h4 {
+  margin-bottom: .2rem;
 }
 
 img {
@@ -13,4 +21,19 @@ img {
 
 .etiqueta-linea {
   background-color: blueviolet;
+}
+
+a .icon {
+  width: 20px;
+  height: 20px;
+}
+
+section .video {
+  max-width: 400px;
+  height: auto;
+}
+
+iframe {
+  width: 50%;
+  height: 50vh;
 }

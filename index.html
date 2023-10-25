@@ -8,9 +8,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Referente a lo que encuentra el usuario en la página entre 55 y 65 carácteres-->
   <title>Aprendiendo HTML</title>
+  <link rel="icon" href="./img/favicon.png">
   <link rel="stylesheet" href="./style.css">
   <!-- Un parrafo que le explique a la persona que contenido va a encontrar en esta página, no mas de 165 caracteres-->
   <meta name="description" content="En esta página estamos aprendiendo los fundamentos de HTML con @jonmircha">
+  <!-- Ayuda al posicionamiento de tu página a nivel CEO -->
+  <link rel="canonical" href="https://tudominio.com/la-url-canonica">
+  <meta name="theme-color" content="#ffff0">
+  <meta property="og:title" content="Aprendiendo HTML">
+  <meta property="og:description" content="En esta página estamos aprendiendo los fundamentos de HTML con @jonmircha">
+  <meta property="og:image" content="./tudominio.com/img/periodic-table-html.jpg">
+  <meta property="og:url" content="./tudominio.com/index.html">
+  <!-- SOLO PARA TWITTER -->
+  <meta name="twitter:card" content="summary">
+  <!-- Solo para mostrar tu usuario en twitter de twitter -->
+  <meta name="twitter-site" content="@tuusuarioentwitter">
   <style>
     .h3 {
       background-color: blue;
@@ -38,7 +50,13 @@
       <li><a href="./index.html#tablas">Tablas</a></li>
       <li><a href="./index.html#enlaces">Enlaces</a></li>
       <li><a href="./index.html#scripts">Scripts en HTML</a></li>
-      <li><a href="./index.html#"></a></li>
+      <li><a href="./index.html#elemntos-interactivos">Elementos Interactivos</a></li>
+      <li><a href="./index.html#audio-video">Audio y Video</a></li>
+      <li><a href="./index.html#iframes">Iframes</a></li>
+      <li><a href="./index.html#formularios">Formularios</a></li>
+      <li><a href="./index.html#data-attributes">Data Attributes</a></li>
+      <li><a href="./index.html#accesibilidad-web">Accesibilidad Web</a></li>
+      <li><a href="./index.html#scripts">Scripts en HTML</a></li>
     </ul>
     <hr>
   </section>
@@ -305,6 +323,231 @@
     <a href="./hola.html">Hacia la página Hola</a><br>
     <!-- rel="nofollow es un comando para que las arañas de busqueda sepan que no es un elemento de la página y no lo sigan" -->
     <a href="https://jonmircha.com/" target="_blank" rel="nofollow">Visita mi sitio web jonmircha.com</a><br>
+    <a href="mailto:hola@jonmircha.com" target="_blank" rel="nofollow">Enlace a correo electrónico</a><br>
+    <a href="tel:1263451671" target="_blank" rel="nofollow">Enlace a télefono</a><br>
+    <a href="https://wa.me/12356747345?text=Creando%20un%20mensaje%20de%20prueba" target="_blank" rel="nofollow">
+      <img class="icon" src="./img/whatsapp.svg" alt="Icono whatsapp">
+    </a><br>
+    <a href="./index.html#inicio">☝️</a>
+    <hr>
+  </section>
+  <section id="elementos-interactivos">
+    <h2>Elementos Interactivos</h2>
+    <button onclick="alert('Hola haz clikeado el botón')">Este es un botón</button><br><br>
+    <details>
+      <summary>Título del Acordeón</summary>
+      <article>
+        <h3>Contenido del Acordeón</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quidem hic ipsam harum inventore, recusandae
+          eligendi cumque accusantium, voluptates, voluptate ducimus. Obcaecati distinctio amet possimus ipsam quas odio
+          accusantium deserunt!</p>
+        <img src="./img/perro.jpg" alt="Perro">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quidem hic ipsam harum inventore, recusandae
+          eligendi cumque accusantium, voluptates, voluptate ducimus. Obcaecati distinctio amet possimus ipsam quas odio
+          accusantium deserunt!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quidem hic ipsam harum inventore, recusandae
+          eligendi cumque accusantium, voluptates, voluptate ducimus. Obcaecati distinctio amet possimus ipsam quas odio
+          accusantium deserunt!</p>
+      </article>
+    </details><br>
+    <details open>
+      <summary>Título del Acordeón</summary>
+      <article>
+        <h3>Contenido del Acordeón</h3>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quidem hic ipsam harum inventore, recusandae
+          eligendi cumque accusantium, voluptates, voluptate ducimus. Obcaecati distinctio amet possimus ipsam quas odio
+          accusantium deserunt!</p>
+        <img src="./img/perro.jpg" alt="Perro">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quidem hic ipsam harum inventore, recusandae
+          eligendi cumque accusantium, voluptates, voluptate ducimus. Obcaecati distinctio amet possimus ipsam quas odio
+          accusantium deserunt!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quidem hic ipsam harum inventore, recusandae
+          eligendi cumque accusantium, voluptates, voluptate ducimus. Obcaecati distinctio amet possimus ipsam quas odio
+          accusantium deserunt!</p>
+      </article>
+    </details>
+    <dialog open>
+      Esto es una ventana modal en HTML
+    </dialog>
+    <a href="./index.html#inicio">☝️</a>
+    <hr>
+  </section>
+  <section id="audio-video">
+    <h2>Audio y Video</h2>
+    <audio src="./media/truenos-rayos.mp3" controls preload>Truenos y Rayos</audio><br>
+    <video class="video" src="./media/perro.mp4" controls preload poster="./img/perro.jpg">Perro</video><br>
+    <a href="./index.html#inicio">☝️</a>
+    <hr>
+  </section>
+  <section id="iframes">
+    <h2>Iframes</h2>
+    <iframe src="./hola.html" frameborder="1"></iframe><br>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26327.184994240164!2d-58.756397895461085!3d-34.429342775163285!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca1de4160edd1%3A0xdf3ce865eb8998f0!2sGarin%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1698146040381!5m2!1ses-419!2sar"
+      style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe><br>
+    <a href="./index.html#inicio">☝️</a>
+    <hr>
+  </section>
+  <section id="formularios">
+    <h2>Formularios</h2>
+    <h3>Elementos de Formularios</h3>
+    <h4>text</h4>
+    <input type="text">
+    <h4>checkbox</h4>
+    <input type="checkbox">
+    <h4>radio</h4>
+    <input type="radio">
+    <h4>date</h4>
+    <input type="date">
+    <h4>color</h4>
+    <input type="color">
+    <h4>button</h4>
+    <input type="button" value="Bóton">
+    <h4>submit</h4>
+    <input type="submit">
+    <h4>reset</h4>
+    <input type="reset">
+    <h4>file</h4>
+    <input type="file">
+    <h4>file (multiple)</h4>
+    <input type="file" multiple>
+    <h4>hidden</h4>
+    <input type="hidden" value="es" name="idioma">
+    <h4>email</h4>
+    <input type="email">
+    <h4>number</h4>
+    <input type="number">
+    <h4>tel</h4>
+    <input type="tel">
+    <h4>password</h4>
+    <input type="password">
+    <h4>search</h4>
+    <input type="search">
+    <h4>textarea</h4>
+    <textarea cols="50" rows="5"></textarea>
+    <h4>select (multiple)</h4>
+    <select name="" id="" multiple>
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="js">JS</option>
+      <option value="php">PHP</option>
+      <option value="pyton">PHYTON</option>
+    </select>
+    <h4>select</h4>
+    <select name="" id="">
+      <option value="html">HTML</option>
+      <option value="css">CSS</option>
+      <option value="js">JS</option>
+      <option value="php">PHP</option>
+      <option value="pyton">PHYTON</option>
+    </select>
+    <h4>text (readonly)</h4>
+    <input type="text" value="costilla" disabled readonly>
+    <h4>text (placeholder)</h4>
+    <input type="text" placeholder="Escribe tu nombre"><br><br>
+    <h3>Ejemplo de Formularios</h3>
+    <h4>Formulario de login</h4>
+    <form action="https://jonmircha.com" method="POST" target="_blank" autocomplete="off">
+      <label for="usuario2">Usuario:</label>
+      <input type="text" name="usuario" id="usuario2" placeholder="Escribe tu usuario"
+        pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Escribe un nombre válido" required><br>
+      <label for="password2">Contraseña:</label>
+      <input type="password" name="password" id="password2" placeholder="Escribe tu password" required><br>
+      <label for="email2">Email:</label>
+      <input type="email" name="email" id="email2" placeholder="Escribe tu email"
+        pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" title="Escribe un email válido" required> <br>
+      <input type="reset"><br>
+      <input type="submit"><br>
+    </form>
+    <!-- https://jonmircha.com/?usuario=12321321 -->
+    <!-- https://jonmircha.com/?usuario=alex&password=123213123 -->
+    <h4>Selects, Radios y Checkbox</h4>
+    <form action="https://jonmircha.com">
+      <label for="idioma">Elige tu idioma</label>
+      <select name="idioma" id="idioma">
+        <option value="en">Inglés</option>
+        <option value="es" selected>Español</option>
+        <option value="fr">Francés</option>
+        <option value="pt">Portugués</option>
+        <option value="it">Italiano</option>
+      </select><br>
+      <p>Elige tu lenguaje de programación favorito:</p>
+      <input type="radio" name="lenguaje" id="radio-js" value="js">
+      <label for="radio-js">JavaScript</label>
+      <input type="radio" name="lenguaje" id="radio-py" value="py">
+      <label for="radio-py">Python</label>
+      <input type="radio" name="lenguaje" id="radio-php" value="php">
+      <label for="radio-php">PHP</label><br><br>
+      <p>Elige tus intereses:</p>
+      <label>
+        <input type="checkbox" name="intereses" value="deportes">
+        Deportes
+      </label>
+      <label>
+        <input type="checkbox" name="intereses" value="musica">
+        Música
+      </label>
+      <label>
+        <input type="checkbox" name="intereses" value="finanzas">
+        Finanzas
+      </label>
+      <label>
+        <input type="checkbox" name="intereses" value="religión">
+        Religión
+      </label>
+      <label>
+        <input type="checkbox" name="intereses" value="medio ambiente">
+        Medio Ambiente
+      </label>
+      <p><label>
+          <input type="checkbox" name="terminos" checked required>¿Aceptas terminos y condiciones?
+        </label></p>
+      <input type="submit"><br>
+      <input type="reset"><br>
+    </form>
+    <!-- https://jonmircha.com/?idioma=pt -->
+    <!-- https://jonmircha.com/?idioma=es -->
+    <!-- https://jonmircha.com/?idioma=es&lenguaje=on -->
+    <!-- https://jonmircha.com/?idioma=es&lenguaje=php -->
+    <!-- https://jonmircha.com/?idioma=es&lenguaje=py&intereses=finanzas&intereses=religi%C3%B3n&intereses=medio+ambiente -->
+    <h4>Formulario de Contacto</h4>
+    <form action="https://formsubmit.co/alexumadw@gmail.com" method="POST">
+      <label for="usuario">Nombre:</label>
+      <input type="text" name="usuario" id="usuario" placeholder="Escribe tu Nombre"
+        pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" title="Sólo acepta letras y espacios en blanco" required> <br>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Escribe tu Email"
+        pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" title="Formato de correo Inválido" required> <br>
+      <textarea name="comentarios" cols="50" rows="10" placeholder="Deja tu comentario aqui"></textarea> <br>
+      <input type="reset">
+      <input type="submit">
+    </form>
+    <a href="./index.html#inicio">☝️</a>
+  </section>
+  <section id="data-attributes">
+    <h2>Data Attributes</h2>
+    <ul>
+      <li data-id="1" data-name="spring">Primavera</li>
+      <li data-id="2" data-name="autumn">Otoño</li>
+      <li data-id="3" data-name="winter">Invierno</li>
+      <li data-id="4" data-name="summer">Verano</li>
+    </ul>
+    <a href="./index.html#inicio">☝️</a>
+    <hr>
+  </section>
+  <section id="accesibilidad-web">
+    <h2>Accesibilidad Web</h2>
+    <h3 role="title">Las estaciones del año</h3>
+    <ul role="list">
+      <li tabindex="1" role="listitem">Primavera</li>
+      <li tabindex="2" role="listitem">Otoño</li>
+      <li tabindex="3" role="listitem">Invierno</li>
+      <li tabindex="4" role="listitem">Verano</li>
+    </ul>
+    <a href="#" role="link" aria-label="En este enlace encontrarás más información sobre las estaciones del año"
+      target="_blank">Más información...</a>
+    <h3>Creando un archivo de codigos .js</h3>
+    <script src="./codigos.js"></script>
     <a href="./index.html#inicio">☝️</a>
     <hr>
   </section>
@@ -317,8 +560,8 @@
     <h3>Creando un archivo de codigos .js</h3>
     <script src="./codigos.js"></script>
     <a href="./index.html#inicio">☝️</a>
+    <hr>
   </section>
-
 </body>
 
 </html>
